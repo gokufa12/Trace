@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/sky"
+    tools:context="edu.cmsc425.doyle.drawingturnbasedgame.FightScreen">
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@drawable/clouds_2">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:id="@+id/enemy_display">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="fill_parent"
+                   android:src="@drawable/archer"
+                   android:adjustViewBounds="true"
+                   android:scaleType="fitCenter"
+               />
+
+                <ProgressBar
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enemy_health"
+                    android:layout_gravity="center"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/custom_progress_bar_horizontal"
+                    android:max="100"
+                    android:progress="100"
+                    />
+            </LinearLayout>
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/traceButton"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/pentagon"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:onClick="onTraceClick"
+            />
+
+        <edu.cmsc425.doyle.drawingturnbasedgame.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            style="?android:attr/progressBarStyleLarge"
+        />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/endButton"
+            android:scaleType="fitCenter"
+            android:src="@drawable/win_image"
+            android:visibility="invisible"
+            android:background="@android:color/transparent"
+            android:onClick="onEndClick"/>
+
+        
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/attack_buttons"
+            android:layout_marginBottom="90dp"
+            >
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/sword_button"
+                android:src="@drawable/sword"
+                android:onClick="onButtonClick"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/arrow_button"
+                android:src="@drawable/arrow"
+                android:onClick="onButtonClick"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/magic_button"
+                android:src="@drawable/magic"
+                android:onClick="onButtonClick"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                />
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:layout_marginBottom="45dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:id="@+id/countDown"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+        />
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/player_display">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/swordsman"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    />
+
+                <ProgressBar
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player_health"
+                    android:layout_gravity="center"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/custom_progress_bar_horizontal"
+                    android:max="100"
+                    android:progress="100"
+                    />
+            </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

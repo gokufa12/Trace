@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_button_layout"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1 Player Fight!"
+            android:id="@+id/button"
+            android:layout_weight="1"
+            android:onClick="on1PClick"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Multiplayer Fight!"
+            android:shadowColor="@color/bright_foreground_disabled_material_dark"
+            android:layout_weight="1"
+            android:clickable="false"/>
+
+
+    </LinearLayout>
+
+    <edu.cmsc425.doyle.drawingturnbasedgame.util.BackgroundView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:onClick="onBgClick"
+    />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/trace"
+        android:id="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/swordsman_transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/archer_transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

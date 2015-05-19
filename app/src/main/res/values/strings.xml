@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Trace</string>
+    <string name="title_activity_character_select">CharacterSelect</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="character_select">Select Your Character</string>
+    <string name="title_activity_fight_screen">FightScreen</string>
+    <string name="title_activity_trace">TraceActivity</string>
+    <string name="key_pref_music_volume">4</string>
+
+</resources>
